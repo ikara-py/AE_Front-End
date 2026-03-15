@@ -1,0 +1,65 @@
+body {
+  font-family: sans-serif;
+  background-color: #f5f5f5;
+}
+
+header {
+  background-color: #27ae60;
+  color: white;
+  padding: 20px;
+}
+
+header nav {
+  display: flex;
+  gap: 20px;
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+}
+
+header a:hover {
+  color: #c7c7c7;
+}
+
+#prochain-match {
+  border-left: 4px solid red;
+  background-color: white;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid gray;
+}
+
+
+button[type="submit"] {
+    background-color: #27AE60;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+}
+
+
+button[type="submit"]:hover {
+    background-color: #18723d;
+}
+
+
+footer {
+    text-align: center;
+    background-color: #222222;
+    color: white;
+    padding: 20px;
+}

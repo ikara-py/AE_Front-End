@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TicketMatch</title>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <header>
@@ -15,7 +16,7 @@
       </nav>
     </header>
     <main>
-      <section>
+      <section id="prochain-match">
         <h2>Prochain match</h2>
         <div><strong>équipe 1</strong> vs <strong>équipe 2</strong></div>
         <p>12/10/2026 <span>14:30</span></p>
@@ -39,18 +40,21 @@
 
         <div>
           <label for="match">Match :</label>
-          <section>
+          <select>
             <option value="1">FC VOID vs Raja Club — 15/03/2025</option>
             <option value="2">FC VOID vs Wydad AC — 22/03/2025</option>
             <option value="3">FC VOID vs AS FAR — 05/04/2025</option>
-          </section>
+          </select>
         </div>
 
           <fieldset>
             <legend>Catégorie de place :</legend>
             <input type="radio" name="categorie" value="Tribune" />
+            <label for="tribune">Tribune</label>
             <input type="radio" name="categorie" value="Virage" />
+            <label for="tribune">Virage</label>
             <input type="radio" name="categorie" value="Pelouse" />
+            <label for="tribune">Pelouse</label>
           </fieldset>
 
           <div>
