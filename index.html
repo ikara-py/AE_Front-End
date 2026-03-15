@@ -4,50 +4,60 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TicketMatch</title>
-    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body>
-    <header>
-      <h1>TicketMatch</h1>
-      <nav>
-        <a href="#">Accueil</a>
-        <a href="#">Matchs</a>
-        <a href="#">Mes Réservations</a>
-      </nav>
+  <body class="bg-gray-100 font-sans">
+    <header class="bg-green-600 text-white p-5">
+      <div class="container mx-auto flex justify-between items-center">
+        <h1 class="text-2xl font-bold">TicketMatch</h1>
+        <nav class="hidden md:flex gap-4">
+          <a href="#" class="hover:text-gray-200">Accueil</a>
+          <a href="#" class="hover:text-gray-200">Matchs</a>
+          <a href="#" class="hover:text-gray-200">Mes Réservations</a>
+        </nav>
+      </div>
     </header>
-    <main>
-      <section id="prochain-match">
-        <h2>Prochain match</h2>
+    <main class="container mx-auto max-w-3xl p-4 mt-8">
+      <section
+        id="prochain-match"
+        class="bg-white shadow-md rounded-lg p-6 border-l-4 border-red-500 mb-8"
+      >
+        <h2 class="text-xl font-bold">Prochain match</h2>
         <div><strong>équipe 1</strong> vs <strong>équipe 2</strong></div>
-        <p>12/10/2026 <span>14:30</span></p>
-        <p>stade</p>
+        <p class="text-gray-600">12/10/2026 <span>14:30</span></p>
+        <p class="text-gray-600">stade</p>
       </section>
 
-      <form action="">
-        <div>
-          <label for="nomComplet">Nom complet : </label>
-          <input type="text" name="nomComplet" required/>
-        </div>
+      <section class="bg-white shadow-md rounded-lg p-6">
+        <h2 class="text-xl font-bold">Réserver un ticket</h2>
+        <form>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+            <div>
+              <label for="nomComplet" class="block mb-1">Nom complet : </label>
+              <input type="text" name="nomComplet" required />
+            </div>
 
-        <div>
-          <label for="email">Email : </label>
-          <input type="email" name="email" required/>
-        </div>
-        <div>
-          <label for="telephone">telephone : </label>
-          <input type="telephone" name="telephone" required/>
-        </div>
+            <div>
+              <label for="email" class="block mb-1">Email : </label>
+              <input type="email" name="email" required class="w-full p-2"/>
+            </div>
+          </div>
+          <div>
+            <label for="telephone">telephone : </label>
+            <input type="telephone" name="telephone" required class="w-full p-2"/>
+          </div>
 
-        <div>
-          <label for="match">Match :</label>
-          <select>
-            <option value="1">FC VOID vs Raja Club — 15/03/2025</option>
-            <option value="2">FC VOID vs Wydad AC — 22/03/2025</option>
-            <option value="3">FC VOID vs AS FAR — 05/04/2025</option>
-          </select>
-        </div>
+          <div>
+            <label for="match" class="block mb-1">Match :</label>
+            <select class="w-full p-2">
+              <option value="1">FC VOID vs Raja Club — 15/03/2025</option>
+              <option value="2">FC VOID vs Wydad AC — 22/03/2025</option>
+              <option value="3">FC VOID vs AS FAR — 05/04/2025</option>
+            </select>
+          </div>
 
-          <fieldset>
+          <fieldset class="mb-4 border border-gray-300 rounded p-4">
             <legend>Catégorie de place :</legend>
             <input type="radio" name="categorie" value="Tribune" />
             <label for="tribune">Tribune</label>
@@ -58,25 +68,26 @@
           </fieldset>
 
           <div>
-            <label for="nombreTickets">Nombre de tickets :</label>
-            <input type="number" name="nombreTickets" min="1" max="10" />
+            <label for="nombreTickets" class="block mb-1">Nombre de tickets :</label>
+            <input type="number" name="nombreTickets" min="1" max="10" class="w-full p-2"/>
           </div>
 
           <div>
-            <label for="commentaire">Commentaire :</label>
-            <textarea name="commentaire"></textarea>
+            <label for="commentaire" class="block mb-1">Commentaire :</label>
+            <textarea name="commentaire" class="w-full p-2"></textarea>
           </div>
 
           <div>
-            <input type="checkbox" name="conditions" />
+            <input type="checkbox" name="conditions" class="flex items-center"/>
             <label for="conditions">J'accepte les conditions générales</label>
           </div>
 
-          <button type="submit">Réserver mon ticket</button>
-      </form>
+          <button type="submit" class="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded w-full md:w-auto">Réserver mon ticket</button>
+        </form>
+      </section>
     </main>
 
-    <footer>
+    <footer class="bg-gray-800 text-white text-center p-6 mt-8">
       <p>« © 2025 FC VOID — Tous droits réservés »</p>
     </footer>
   </body>
