@@ -34,3 +34,7 @@ matchs.forEach(match => {
 
   sectionProchainMatch.appendChild(card);
 });
+
+function getMatchById(id) {
+    return matchs.find(match => match.id === id);
+}
