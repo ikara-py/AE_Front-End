@@ -1,30 +1,79 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TicketMatch</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <h1> TicketMatch</h1>
-        <nav>
-            <a href="#">Accueil</a>
-            <a href="#">Matchs</a>
-            <a href="#">Mes Réservations</a>
-        </nav>
+      <h1>TicketMatch</h1>
+      <nav>
+        <a href="#">Accueil</a>
+        <a href="#">Matchs</a>
+        <a href="#">Mes Réservations</a>
+      </nav>
     </header>
     <main>
-        <section>
-            <h2>Prochain match</h2>
-            <div><strong>équipe 1</strong> vs <strong>équipe 2</strong></div>
-            <p>12/10/2026 <span>14:30</span></p>
-            <p>stade</p>
-        </section>
+      <section>
+        <h2>Prochain match</h2>
+        <div><strong>équipe 1</strong> vs <strong>équipe 2</strong></div>
+        <p>12/10/2026 <span>14:30</span></p>
+        <p>stade</p>
+      </section>
+
+      <form action="">
+        <div>
+          <label for="nomComplet">Nom complet : </label>
+          <input type="text" name="nomComplet" required/>
+        </div>
+
+        <div>
+          <label for="email">Email : </label>
+          <input type="email" name="email" required/>
+        </div>
+        <div>
+          <label for="telephone">telephone : </label>
+          <input type="telephone" name="telephone" required/>
+        </div>
+
+        <div>
+          <label for="match">Match :</label>
+          <section>
+            <option value="1">FC VOID vs Raja Club — 15/03/2025</option>
+            <option value="2">FC VOID vs Wydad AC — 22/03/2025</option>
+            <option value="3">FC VOID vs AS FAR — 05/04/2025</option>
+          </section>
+        </div>
+
+          <fieldset>
+            <legend>Catégorie de place :</legend>
+            <input type="radio" name="categorie" value="Tribune" />
+            <input type="radio" name="categorie" value="Virage" />
+            <input type="radio" name="categorie" value="Pelouse" />
+          </fieldset>
+
+          <div>
+            <label for="nombreTickets">Nombre de tickets :</label>
+            <input type="number" name="nombreTickets" min="1" max="10" />
+          </div>
+
+          <div>
+            <label for="commentaire">Commentaire :</label>
+            <textarea name="commentaire"></textarea>
+          </div>
+
+          <div>
+            <input type="checkbox" name="conditions" />
+            <label for="conditions">J'accepte les conditions générales</label>
+          </div>
+
+          <button type="submit">Réserver mon ticket</button>
+      </form>
     </main>
 
     <footer>
-        <p>« © 2025 FC VOID — Tous droits réservés »</p>
+      <p>« © 2025 FC VOID — Tous droits réservés »</p>
     </footer>
-</body>
+  </body>
 </html>
