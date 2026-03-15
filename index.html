@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TicketMatch</title>
-    <!-- <link rel="stylesheet" href="style.css"> -->
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body class="bg-gray-100 font-sans">
@@ -19,38 +18,40 @@
       </div>
     </header>
     <main class="container mx-auto max-w-3xl p-4 mt-8">
+      
+      <div class="text-green-800 p-4 font-bold mb-6">
+        Total des réservations : <span id="compteur-reservations">0</span>
+      </div>
+
       <section
         id="prochain-match"
         class="bg-white shadow-md rounded-lg p-6 border-l-4 border-red-500 mb-8"
       >
-        <h2 class="text-xl font-bold">Prochain match</h2>
-        <div><strong>équipe 1</strong> vs <strong>équipe 2</strong></div>
-        <p class="text-gray-600">12/10/2026 <span>14:30</span></p>
-        <p class="text-gray-600">stade</p>
+        <h2 class="text-xl font-bold mb-4">Prochain match</h2>
       </section>
 
       <section class="bg-white shadow-md rounded-lg p-6">
-        <h2 class="text-xl font-bold">Réserver un ticket</h2>
-        <form>
+        <h2 class="text-xl font-bold mb-4">Réserver un ticket</h2>
+        <form id="formulaire-reservation">
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
             <div>
               <label for="nomComplet" class="block mb-1">Nom complet : </label>
-              <input type="text" name="nomComplet" required />
+              <input type="text" name="nomComplet" required class="w-full p-2 border border-gray-300 rounded" />
             </div>
 
             <div>
               <label for="email" class="block mb-1">Email : </label>
-              <input type="email" name="email" required class="w-full p-2"/>
+              <input type="email" name="email" required class="w-full p-2 border border-gray-300 rounded"/>
             </div>
           </div>
-          <div>
-            <label for="telephone">telephone : </label>
-            <input type="telephone" name="telephone" required class="w-full p-2"/>
+          <div class="mb-4">
+            <label for="telephone" class="block mb-1">Téléphone : </label>
+            <input type="tel" name="telephone" required class="w-full p-2 border border-gray-300 rounded"/>
           </div>
 
           <div>
             <label for="match" class="block mb-1">Match :</label>
-            <select class="w-full p-2">
+            <select id="match" name="match" class="w-full p-2 border border-gray-300 rounded">
               <option value="1">FC VOID vs Raja Club — 15/03/2025</option>
               <option value="2">FC VOID vs Wydad AC — 22/03/2025</option>
               <option value="3">FC VOID vs AS FAR — 05/04/2025</option>
@@ -69,16 +70,16 @@
 
           <div>
             <label for="nombreTickets" class="block mb-1">Nombre de tickets :</label>
-            <input type="number" name="nombreTickets" min="1" max="10" class="w-full p-2"/>
+            <input type="number" name="nombreTickets" min="1" max="10" class="w-full p-2 border border-gray-300 rounded"/>
           </div>
 
-          <div>
+          <div class="mb-4">
             <label for="commentaire" class="block mb-1">Commentaire :</label>
-            <textarea name="commentaire" class="w-full p-2"></textarea>
+            <textarea name="commentaire" class="w-full p-2 border border-gray-300 rounded"></textarea>
           </div>
 
-          <div>
-            <input type="checkbox" name="conditions" class="flex items-center"/>
+          <div class="mb-4 flex items-center">
+            <input type="checkbox" name="conditions" class="mr-2"/>
             <label for="conditions">J'accepte les conditions générales</label>
           </div>
 
@@ -90,5 +91,6 @@
     <footer class="bg-gray-800 text-white text-center p-6 mt-8">
       <p>« © 2025 FC VOID — Tous droits réservés »</p>
     </footer>
+    <script src="app.js"></script>
   </body>
 </html>
